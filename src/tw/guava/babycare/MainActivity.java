@@ -1,6 +1,7 @@
 package tw.guava.babycare;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +18,10 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        Intent intent = new Intent(this,CreateBaby.class);
+        startActivity(intent);
+        
         requestWindowFeature(Window.FEATURE_NO_TITLE);       
         getWindow().setFlags(
         		WindowManager.LayoutParams.FLAG_FULLSCREEN,                  
