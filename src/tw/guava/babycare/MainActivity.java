@@ -1,8 +1,11 @@
 package tw.guava.babycare;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,12 +18,19 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends Activity implements OnClickListener {
 	myView babyView;
+	SharedPreferences sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sp = getSharedPreferences("BabyName", Context.MODE_PRIVATE);
+        String data = sp.getString("name", "null");
+        Log.i("ttt", data+"");
+        if(data.equals("null"))
+        {
+        	Intent intent = new Intent(this,CreateBaby.class);
+            startActivity(intent);
+        }
         
-        Intent intent = new Intent(this,CreateBaby.class);
-        startActivity(intent);
         
         requestWindowFeature(Window.FEATURE_NO_TITLE);       
         getWindow().setFlags(
