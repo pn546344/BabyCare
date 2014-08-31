@@ -5,15 +5,38 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.NumberPicker;
 
-public class NurseryCenter extends Activity {
+public class NurseryCenter extends Activity implements OnClickListener {
 
+	NumberPicker np1,np2;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.nursery_center);
 		ActionBar actionBar = getActionBar();
 		actionBar.hide();	//¡Ù¬√ActionBar
+		np1 = (NumberPicker)findViewById(R.id.numberPicker1);
+		np2 = (NumberPicker)findViewById(R.id.numberPicker2);
+		NumberPicker.Formatter Two_Digit = new NumberPicker.Formatter() {
+			@Override
+			public String format(int value) {
+				// TODO Auto-generated method stub
+				return String.format("%02d", value);
+			}
+		};
+		np1.setMaxValue(7);
+		np1.setMinValue(0);
+		np1.setWrapSelectorWheel(true);
+		np2.setMaxValue(59);
+		np2.setMinValue(0);
+		np2.setFormatter(Two_Digit);
+		np2.setWrapSelectorWheel(true);
+		Button btn = (Button)findViewById(R.id.button1);
+		btn.setOnClickListener(this);
 	}
 
 	@Override
@@ -33,5 +56,12 @@ public class NurseryCenter extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+		
 	}
 }
