@@ -5,5 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_create_baby">CreateBaby</string>
+    <string name="title_activity_food">Food</string>
+    <string name="title_activity_nursery">Nursery</string>
+    <string name="title_activity_nursery_center">NurseryCenter</string>
 
 </resources>

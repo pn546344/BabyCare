@@ -26,6 +26,18 @@
             android:name=".CreateBaby"
             android:label="@string/title_activity_create_baby" >
         </activity>
+        <activity
+            android:name=".Food"
+            android:label="@string/title_activity_food" >
+        </activity>
+        <activity
+            android:name=".Nursery"
+            android:label="@string/title_activity_nursery" >
+        </activity>
+        <activity
+            android:name=".NurseryCenter"
+            android:label="@string/title_activity_nursery_center" >
+        </activity>
     </application>
 
 </manifest>
