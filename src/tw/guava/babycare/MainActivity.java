@@ -22,9 +22,10 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sp = getSharedPreferences("BabyName", Context.MODE_PRIVATE);
+        sp = getSharedPreferences("BabyName", Context.MODE_PRIVATE);	//讀取嬰兒的名子
         String data = sp.getString("name", "null");
         Log.i("ttt", data+"");
+        //如果無法讀取嬰兒的名子時就會將畫面跳轉至創建嬰兒的畫面
         if(data.equals("null"))
         {
         	Intent intent = new Intent(this,CreateBaby.class);
@@ -43,6 +44,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		babyView.topLayout.setVisibility(View.GONE);
 		babyView.bottomLayout.setVisibility(View.GONE);
 		
+		//設定畫面的按鈕
         ImageView imgview1=(ImageView)findViewById(R.id.imageView1);
         ImageView imgview2=(ImageView)findViewById(R.id.imageView2);
         ImageView imgview3=(ImageView)findViewById(R.id.imageView3);
@@ -55,6 +57,7 @@ public class MainActivity extends Activity implements OnClickListener {
         imgview4.setOnClickListener(this);
         imgview5.setOnClickListener(this);
         imgview6.setOnClickListener(this);
+        
         
     }
     @Override
