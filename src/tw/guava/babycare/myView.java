@@ -18,7 +18,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 public class myView extends SurfaceView implements Runnable{
-	LinearLayout topLayout,bottomLayout;
+	LinearLayout bottomLayout;
 	SurfaceHolder holder;
 	Context context;
 	boolean stop=false;
@@ -61,11 +61,9 @@ public class myView extends SurfaceView implements Runnable{
 				{
 					if(!visible)
 					{
-						topLayout.setVisibility(View.VISIBLE);
 						bottomLayout.setVisibility(View.VISIBLE);
 					}else
 					{
-						topLayout.setVisibility(View.GONE);
 						bottomLayout.setVisibility(View.GONE);
 					}
 					visible=!visible;

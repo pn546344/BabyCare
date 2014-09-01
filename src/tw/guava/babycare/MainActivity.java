@@ -39,24 +39,16 @@ public class MainActivity extends Activity implements OnClickListener {
         		WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_main);
 		babyView=(myView)findViewById(R.id.myView1);
-		babyView.topLayout=(LinearLayout)findViewById(R.id.linearLayout1);
 		babyView.bottomLayout=(LinearLayout)findViewById(R.id.linearLayout2);
-		babyView.topLayout.setVisibility(View.GONE);
 		babyView.bottomLayout.setVisibility(View.GONE);
 		
 		//設定畫面的按鈕
         ImageView imgview1=(ImageView)findViewById(R.id.imageView1);
         ImageView imgview2=(ImageView)findViewById(R.id.imageView2);
         ImageView imgview3=(ImageView)findViewById(R.id.imageView3);
-        ImageView imgview4=(ImageView)findViewById(R.id.imageView4);
-        ImageView imgview5=(ImageView)findViewById(R.id.imageView5);
-        ImageView imgview6=(ImageView)findViewById(R.id.imageView6);
         imgview1.setOnClickListener(this);
         imgview2.setOnClickListener(this);
         imgview3.setOnClickListener(this);
-        imgview4.setOnClickListener(this);
-        imgview5.setOnClickListener(this);
-        imgview6.setOnClickListener(this);
         
         
     }
@@ -94,33 +86,21 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		Intent intent;
-		babyView.topLayout.setVisibility(View.GONE);
 		babyView.bottomLayout.setVisibility(View.GONE);
 		//判斷按鈕，進行動應動作
 		babyView.feeding();
 		switch (v.getId()) {
+
 		case R.id.imageView1:	//imageView1被按下時跳轉畫面到Food頁面
 			intent = new Intent(this,Food.class);
             startActivity(intent);
 			break;
 		case R.id.imageView2:	//imageView2被按下時跳轉畫面到Food頁面
-			intent = new Intent(this,Food.class);
+			intent = new Intent(this,NurseryCenter.class);
             startActivity(intent);
 			break;
 		case R.id.imageView3:	//imageView3被按下時跳轉畫面到Food頁面
-			intent = new Intent(this,Food.class);
-            startActivity(intent);
-			break;
-		case R.id.imageView4:	//imageView4被按下時跳轉畫面到Food頁面
-			intent = new Intent(this,Food.class);
-            startActivity(intent);
-			break;
-		case R.id.imageView5:	//imageView5被按下時跳轉畫面到Food頁面
 			intent = new Intent(this,Nursery.class);
-            startActivity(intent);
-			break;
-		case R.id.imageView6:	//imageView6被按下時跳轉畫面到Food頁面
-			intent = new Intent(this,NurseryCenter.class);
             startActivity(intent);
 			break;
 		}

@@ -2,32 +2,24 @@ package tw.guava.babycare;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
 
-public class Nursery extends Activity implements OnClickListener {
+public class NurseryPeople extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.nursery);
+		setContentView(R.layout.nursery_people);
 		ActionBar actionBar = getActionBar();
 		actionBar.hide();	//¡Ù¬√ActionBar
-		ImageView img1 = (ImageView)findViewById(R.id.imageView1);
-		ImageView img2 = (ImageView)findViewById(R.id.imageView2);
-		img1.setOnClickListener(this);
-		img2.setOnClickListener(this);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.nursery, menu);
+		getMenuInflater().inflate(R.menu.nursery_people, menu);
 		return true;
 	}
 
@@ -41,22 +33,5 @@ public class Nursery extends Activity implements OnClickListener {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-
-	@Override
-	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
-		Intent intent;
-		switch (arg0.getId()) {
-		case R.id.imageView1:
-			intent = new Intent(this,NurseryPeople.class);
-            startActivity(intent);
-			break;
-		case R.id.imageView2:
-			intent = new Intent(this,NurseryCenter.class);
-            startActivity(intent);
-			break;
-	
-		}
 	}
 }
