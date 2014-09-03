@@ -103,23 +103,23 @@ public class MainActivity extends Activity implements OnClickListener {
 			intent = new Intent(this,Food.class);
             startActivity(intent);
 			break;
-		case R.id.imageView2:	//imageView2被按下時跳轉畫面到Food頁面
-			intent = new Intent(this,Food.class);
+		case R.id.imageView2:	//imageView2被按下時跳轉畫面到Interactive頁面
+			intent = new Intent(this,Interactive.class);
             startActivity(intent);
 			break;
 		case R.id.imageView3:	//imageView3被按下時跳轉畫面到Food頁面
-			intent = new Intent(this,Food.class);
-            startActivity(intent);
+			/*intent = new Intent(this,Food.class);
+            startActivity(intent);*/
 			break;
 		case R.id.imageView4:	//imageView4被按下時跳轉畫面到Food頁面
-			intent = new Intent(this,Food.class);
-            startActivity(intent);
+			/*intent = new Intent(this,Food.class);
+            startActivity(intent);*/
 			break;
-		case R.id.imageView5:	//imageView5被按下時跳轉畫面到Food頁面
+		case R.id.imageView5:	//imageView5被按下時跳轉畫面到Nursery頁面
 			intent = new Intent(this,Nursery.class);
             startActivity(intent);
 			break;
-		case R.id.imageView6:	//imageView6被按下時跳轉畫面到Food頁面
+		case R.id.imageView6:	//imageView6被按下時跳轉畫面到NurseryCenter頁面
 			intent = new Intent(this,NurseryCenter.class);
             startActivity(intent);
 			break;

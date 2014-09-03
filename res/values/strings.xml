@@ -8,5 +8,6 @@
     <string name="title_activity_food">Food</string>
     <string name="title_activity_nursery">Nursery</string>
     <string name="title_activity_nursery_center">NurseryCenter</string>
+    <string name="title_activity_interactive">Interactive</string>
 
 </resources>

@@ -38,6 +38,10 @@
             android:name=".NurseryCenter"
             android:label="@string/title_activity_nursery_center" >
         </activity>
+        <activity
+            android:name=".Interactive"
+            android:label="@string/title_activity_interactive" >
+        </activity>
     </application>
 
 </manifest>
