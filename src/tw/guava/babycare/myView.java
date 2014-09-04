@@ -100,7 +100,9 @@ public class myView extends SurfaceView implements Runnable{
 			picIndex++;
 			if(picIndex>=babyImg.length)
 				picIndex=0;
-			if(direction==0)
+			
+			//控制圖片移動
+			if(direction==0)	//向右邊移動
 			{
 				x+=10;
 				if(x>=screenWidth-picWidth)
@@ -109,7 +111,8 @@ public class myView extends SurfaceView implements Runnable{
 					x=screenWidth-picWidth;
 				}
 			}
-			else if(direction==1){
+			else if(direction==1)	//向左邊移動
+			{
 				x-=10;
 				if(x<=0)
 				{

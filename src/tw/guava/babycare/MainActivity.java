@@ -99,19 +99,18 @@ public class MainActivity extends Activity implements OnClickListener {
 		//判斷按鈕，進行動應動作
 		babyView.feeding();
 		switch (v.getId()) {
-		case R.id.imageView1:	//imageView1被按下時跳轉畫面到Food頁面
+		case R.id.imageView1:	//imageView1被按下便執行喝奶程式
+		
+			break;
+		case R.id.imageView2:	//imageView2被按下時跳轉畫面到Food頁面(副食品)
 			intent = new Intent(this,Food.class);
             startActivity(intent);
 			break;
-		case R.id.imageView2:	//imageView2被按下時跳轉畫面到Interactive頁面
-			intent = new Intent(this,Interactive.class);
-            startActivity(intent);
-			break;
-		case R.id.imageView3:	//imageView3被按下時跳轉畫面到Food頁面
+		case R.id.imageView3:	//imageView3
 			/*intent = new Intent(this,Food.class);
             startActivity(intent);*/
 			break;
-		case R.id.imageView4:	//imageView4被按下時跳轉畫面到Food頁面
+		case R.id.imageView4:	//imageView4
 			/*intent = new Intent(this,Food.class);
             startActivity(intent);*/
 			break;
