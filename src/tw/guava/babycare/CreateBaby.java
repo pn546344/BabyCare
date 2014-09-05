@@ -31,9 +31,7 @@ public class CreateBaby extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
-		Button btn = (Button)findViewById(R.id.button1);
-		switch (arg0.getId()) {
-		case R.id.button1:
+
 			EditText ed = (EditText)findViewById(R.id.editText1);
 			if(ed.getText()+"" != "")
 			{
@@ -49,20 +47,9 @@ public class CreateBaby extends Activity implements OnClickListener {
 				Toast.makeText(this, "請輸入名子", Toast.LENGTH_SHORT).show();
 				//顯示提醒標語
 			}
-			
-			break;
+		
 
 		}
 		
-		
-		
-		
-		
-		
-		
-	}
-
-	
-
 	
 }
