@@ -18,26 +18,26 @@
 
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="55sp"
-            android:layout_height="55sp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:src="@drawable/milk" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="55sp"
-            android:layout_height="55sp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:src="@drawable/hipp" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="55sp"
-            android:layout_height="55sp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:src="@drawable/pacifier" />
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="55sp"
-            android:layout_height="55sp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:src="@drawable/bed" />
     </LinearLayout>
 
@@ -49,9 +49,9 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher" />
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/nursery" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -69,14 +69,14 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/heart" />
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/feel" />
 
     </LinearLayout>
