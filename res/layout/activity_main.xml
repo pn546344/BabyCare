@@ -24,9 +24,9 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher" />
+            android:layout_width="55sp"
+            android:layout_height="55sp"
+            android:src="@drawable/hipp" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -68,15 +68,15 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher" />
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:src="@drawable/heart" />
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher" />
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:src="@drawable/feel" />
 
     </LinearLayout>
 
