@@ -41,8 +41,9 @@ public class MainActivity extends Activity implements OnClickListener {
 		babyView=(myView)findViewById(R.id.myView1);
 		babyView.topLayout=(LinearLayout)findViewById(R.id.linearLayout1);
 		babyView.bottomLayout=(LinearLayout)findViewById(R.id.linearLayout2);
-		babyView.topLayout.setVisibility(View.GONE);
-		babyView.bottomLayout.setVisibility(View.GONE);
+		babyView.barLayout = (LinearLayout)findViewById(R.id.LinearLayout3);
+		babyView.topLayout.setVisibility(View.GONE);	//隱藏topLayout
+		babyView.bottomLayout.setVisibility(View.GONE);	//隱藏bottomLayout
 		
 		//設定畫面的按鈕
         ImageView imgview1=(ImageView)findViewById(R.id.imageView1);
@@ -96,6 +97,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		Intent intent;
 		babyView.topLayout.setVisibility(View.GONE);
 		babyView.bottomLayout.setVisibility(View.GONE);
+		babyView.barLayout.setVisibility(View.VISIBLE); //顯示barLayout
 		//判斷按鈕，進行動應動作
 		babyView.feeding();
 		switch (v.getId()) {
