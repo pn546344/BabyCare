@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 public class MainActivity extends Activity implements OnClickListener {
 	myView babyView;
 	SharedPreferences sp;
+	GameNumerical game;	//宣告遊戲的數值
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

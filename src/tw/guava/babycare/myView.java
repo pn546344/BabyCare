@@ -150,7 +150,7 @@ public class myView extends SurfaceView implements Runnable{
 	{
 		stop=false;
 		t=new Thread(this);
-		t.start();
+		t.start();	//±Ò°ÊmyView°õ¦æºü
 	}
 
 }
