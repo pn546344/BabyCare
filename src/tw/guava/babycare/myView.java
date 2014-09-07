@@ -29,6 +29,8 @@ public class myView extends SurfaceView implements Runnable{
 	boolean visible=false;
 	Paint health = new Paint();
 	Paint feel = new Paint();
+	GameNumerical game = new GameNumerical();	//宣告遊戲的數值
+	float healthNumber , feelNumber;
 	
 	public myView(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -44,6 +46,7 @@ public class myView extends SurfaceView implements Runnable{
 		feel.setColor(Color.BLUE);
 		feel.setStrokeCap(Cap.ROUND);
 		feel.setStrokeWidth(10);
+		game.start();
 	}
 	
 	@Override
@@ -96,8 +99,11 @@ public class myView extends SurfaceView implements Runnable{
 			Canvas canvas=holder.lockCanvas();
 			canvas.drawARGB(255, 150, 150, 10);
 			canvas.drawBitmap(babyImg[picIndex], x, y, null);
-			canvas.drawLine(100, 50, 550, 50, health);	//畫線
-			canvas.drawLine(100, 130, 550, 130, feel);
+			
+			healthNumber = (float)game.getHealth();
+			feelNumber = (float)game.getFeel();
+			canvas.drawLine(100, 50, healthNumber*5, 50, health);	//畫線
+			canvas.drawLine(100, 130, feelNumber*5, 130, feel);
 			holder.unlockCanvasAndPost(canvas);
 			picIndex++;
 			if(picIndex>=babyImg.length)

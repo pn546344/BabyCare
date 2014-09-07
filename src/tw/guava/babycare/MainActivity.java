@@ -19,13 +19,12 @@ import android.widget.LinearLayout;
 public class MainActivity extends Activity implements OnClickListener {
 	myView babyView;
 	SharedPreferences sp;
-	GameNumerical game;	//宣告遊戲的數值
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         sp = getSharedPreferences("BabyName", Context.MODE_PRIVATE);	//讀取嬰兒的名子
         String data = sp.getString("name", "null");
-        Log.i("ttt", data+"");
         //如果無法讀取嬰兒的名子時就會將畫面跳轉至創建嬰兒的畫面
         if(data.equals("null"))
         {
