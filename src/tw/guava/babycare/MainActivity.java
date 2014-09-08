@@ -102,19 +102,17 @@ public class MainActivity extends Activity implements OnClickListener {
 		babyView.feeding();
 		switch (v.getId()) {
 		case R.id.imageView1:	//imageView1被按下便執行喝奶程式
-		
+			babyView.game.setHealth(100);
 			break;
 		case R.id.imageView2:	//imageView2被按下時跳轉畫面到Food頁面(副食品)
 			intent = new Intent(this,Food.class);
             startActivity(intent);
 			break;
 		case R.id.imageView3:	//imageView3
-			/*intent = new Intent(this,Food.class);
-            startActivity(intent);*/
+			babyView.game.setFeel(100);
 			break;
 		case R.id.imageView4:	//imageView4
-			/*intent = new Intent(this,Food.class);
-            startActivity(intent);*/
+			babyView.game.setFeel(100);
 			break;
 		case R.id.imageView5:	//imageView5被按下時跳轉畫面到Nursery頁面
 			intent = new Intent(this,Nursery.class);
