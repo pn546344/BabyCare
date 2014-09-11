@@ -42,6 +42,7 @@
             android:name=".Interactive"
             android:label="@string/title_activity_interactive" >
         </activity>
+        <service android:name="Timer"></service>
     </application>
 
 </manifest>

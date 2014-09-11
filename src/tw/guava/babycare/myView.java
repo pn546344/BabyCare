@@ -23,7 +23,7 @@ public class myView extends SurfaceView implements Runnable{
 	Context context;
 	boolean stop=false;
 	int x,y,picIndex=0,direction=0;
-	Thread t;
+	Thread t,gameThread;
 	int screenWidth=0,screenHeight=0,picWidth,picHeight;
 	Bitmap babyImg[]=new Bitmap[2];
 	boolean visible=false;
@@ -46,7 +46,8 @@ public class myView extends SurfaceView implements Runnable{
 		feel.setColor(Color.BLUE);
 		feel.setStrokeCap(Cap.ROUND);
 		feel.setStrokeWidth(10);
-		game.start();
+		gameThread = new Thread(game);
+		gameThread.start();
 	}
 	
 	@Override

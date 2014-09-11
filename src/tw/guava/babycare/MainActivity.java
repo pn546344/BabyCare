@@ -101,8 +101,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		//判斷按鈕，進行動應動作
 		babyView.feeding();
 		switch (v.getId()) {
-		case R.id.imageView1:	//imageView1被按下便執行喝奶程式
-			babyView.game.setHealth(100);
+		case R.id.imageView1:	//imageView1被按下便執行配方奶程式
+			babyView.game.setHealth(5);		//增加健康度5單位
+			babyView.game.setFeel(2); 		//增加心理狀態2單位
+			babyView.game.setHungry(30); 	//增加飽食度30單位
 			break;
 		case R.id.imageView2:	//imageView2被按下時跳轉畫面到Food頁面(副食品)
 			intent = new Intent(this,Food.class);
