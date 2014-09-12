@@ -111,7 +111,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.imageView2:	//imageView2被按下時跳轉畫面到Food頁面(副食品)
 			intent = new Intent(this,FoodList.class);
-            startActivity(intent);
+            startActivityForResult(intent, 1);
 			break;
 		case R.id.imageView3:	//imageView3
 			babyView.game.setFeel(100);
@@ -128,6 +128,34 @@ public class MainActivity extends Activity implements OnClickListener {
             startActivity(intent);
 			break;
 		}
+		
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		if(requestCode == 1)
+			if(resultCode == RESULT_OK){
+				String status;
+				status = data.getStringExtra("result");
+				if(status.equals("1"))		//吃米糊
+				{
+					babyView.game.setHungry(20);
+				}
+				else if(status.equals("2"))	//吃肉泥
+				{
+					babyView.game.setHungry(25);
+				}
+				else if(status.equals("3"))	//吃嬰兒餅乾
+				{
+					babyView.game.setHungry(10);
+				}else if(status.equals("4"))	//吃白飯
+				{
+					babyView.game.setHungry(30);;
+				}
+//				Log.i("ttt", "getResultCode="+data.getStringExtra("result"));
+			}
+		super.onActivityResult(requestCode, resultCode, data);
 		
 	}
 }

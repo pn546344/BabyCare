@@ -75,9 +75,9 @@ public class GameNumerical extends Activity implements Runnable{
 				stop = true;					//如果體力值變為0則停止迴圈
 			else
 			{
-				health = health-0.001;			//健康度的平時消耗
+			//	health = health-0.001;			//健康度的平時消耗
 				Log.i("ttt", "health="+health);
-				feel = feel-0.001;				//心情度的平時消耗
+			//	feel = feel-0.001;				//心情度的平時消耗
 			}
 			
 			

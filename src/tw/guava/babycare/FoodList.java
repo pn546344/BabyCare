@@ -5,13 +5,19 @@ import java.util.HashMap;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class FoodList extends Activity {
+public class FoodList extends Activity implements OnItemClickListener {
 	String [] date , data;
 	int[] pic;
 	@Override
@@ -35,6 +41,7 @@ public class FoodList extends Activity {
 		ListView lv = (ListView)findViewById(R.id.listView1);
 		SimpleAdapter adapter = new SimpleAdapter(this, list, R.layout.cus_list, new String[]{"pic", "date","data"},new int[]{R.id.imageView1,R.id.textView1,R.id.textView2});
 		lv.setAdapter(adapter);
+		lv.setOnItemClickListener(this);
 	
 	}
 
@@ -56,4 +63,31 @@ public class FoodList extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+		// TODO Auto-generated method stub
+		Intent intent = new Intent();
+		String itencode="0";
+		if(arg3 == 0)
+			itencode = "1";
+			//Log.i("ttt", "¦Ì­J");
+		else if(arg3 == 1)
+			itencode = "2";
+			//Log.i("ttt", "¦×ªd");
+		else if (arg3 == 2)
+			itencode = "3";
+			//Log.i("ttt", "»æ¸Ó");
+		else 
+			itencode = "4";
+			//Log.i("ttt", "¥Õ¶º");
+			
+		intent.putExtra("result", itencode);
+		setResult(RESULT_OK,intent);
+		finish();
+		
+	}
+
+		
+	
 }
