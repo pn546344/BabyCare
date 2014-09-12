@@ -1,6 +1,7 @@
 package tw.guava.babycare;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -25,7 +26,7 @@ public class myView extends SurfaceView implements Runnable{
 	int x,y,picIndex=0,direction=0;
 	Thread t,gameThread;
 	int screenWidth=0,screenHeight=0,picWidth,picHeight;
-	Bitmap babyImg[]=new Bitmap[2];
+	Bitmap babyImg[]=new Bitmap[9];
 	boolean visible=false;
 	Paint health = new Paint();
 	Paint feel = new Paint();
@@ -36,8 +37,16 @@ public class myView extends SurfaceView implements Runnable{
 		super(context, attrs);
 		this.context=context;
 		holder=getHolder();
-		babyImg[0]=BitmapFactory.decodeResource(getResources(), R.drawable.baby1);
-		babyImg[1]=BitmapFactory.decodeResource(getResources(), R.drawable.baby2);
+		babyImg[0]=BitmapFactory.decodeResource(getResources(), R.drawable.a);
+		babyImg[1]=BitmapFactory.decodeResource(getResources(), R.drawable.a);
+		babyImg[2]=BitmapFactory.decodeResource(getResources(), R.drawable.a);
+		babyImg[3]=BitmapFactory.decodeResource(getResources(), R.drawable.aa);
+		babyImg[4]=BitmapFactory.decodeResource(getResources(), R.drawable.aa);
+		babyImg[5]=BitmapFactory.decodeResource(getResources(), R.drawable.aa);
+		babyImg[6]=BitmapFactory.decodeResource(getResources(), R.drawable.aaa);
+		babyImg[7]=BitmapFactory.decodeResource(getResources(), R.drawable.aaa);
+		babyImg[8]=BitmapFactory.decodeResource(getResources(), R.drawable.aaa);
+		
 		picWidth=babyImg[0].getWidth();
 		picHeight=babyImg[0].getHeight();
 		health.setColor(Color.RED);	//設定筆刷顏色
@@ -113,7 +122,7 @@ public class myView extends SurfaceView implements Runnable{
 			//控制圖片移動
 			if(direction==0)	//向右邊移動
 			{
-				x+=10;
+				//x+=10;
 				if(x>=screenWidth-picWidth)
 				{
 					direction=1;
@@ -122,7 +131,7 @@ public class myView extends SurfaceView implements Runnable{
 			}
 			else if(direction==1)	//向左邊移動
 			{
-				x-=10;
+				//x-=10;
 				if(x<=0)
 				{
 					direction=0;

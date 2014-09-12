@@ -59,6 +59,9 @@ public class MainActivity extends Activity implements OnClickListener {
         imgview5.setOnClickListener(this);
         imgview6.setOnClickListener(this);
         
+        Intent intent = new Intent(this,GameTimeService.class);
+        startService(intent);
+        
         
     }
     @Override
@@ -107,7 +110,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			babyView.game.setHungry(30); 	//增加飽食度30單位
 			break;
 		case R.id.imageView2:	//imageView2被按下時跳轉畫面到Food頁面(副食品)
-			intent = new Intent(this,Food.class);
+			intent = new Intent(this,FoodList.class);
             startActivity(intent);
 			break;
 		case R.id.imageView3:	//imageView3

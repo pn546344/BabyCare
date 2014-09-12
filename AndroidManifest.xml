@@ -3,10 +3,13 @@
     package="tw.guava.babycare"
     android:versionCode="1"
     android:versionName="1.0" >
+    
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="16"
         android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +18,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait" >
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,13 +41,22 @@
         </activity>
         <activity
             android:name=".NurseryCenter"
-            android:label="@string/title_activity_nursery_center" >
+            android:label="@string/title_activity_nursery_center" 
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Interactive"
             android:label="@string/title_activity_interactive" >
         </activity>
-        <service android:name="GameTimeService"></service>
+
+        <service android:name=".GameTimeService" >
+        </service>
+
+        <activity
+            android:name=".FoodList"
+            android:label="@string/title_activity_food_list" 
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

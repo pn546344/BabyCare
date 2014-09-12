@@ -3,6 +3,7 @@ package tw.guava.babycare;
 import android.R.integer;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
@@ -50,6 +51,8 @@ public class GameNumerical extends Activity implements Runnable{
 			feel   = Integer.valueOf(dataFeel);
 			hungry = Integer.valueOf(dataHungry);
 		}
+		Log.i("ttt", "ready to start service");
+		
 	}
 	
 	@Override
